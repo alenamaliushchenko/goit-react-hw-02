@@ -1,40 +1,43 @@
 import { useState, useEffect } from "react";
+import { Description } from "../Description/Description.jsx";
 import { Notification } from "../Notification/Notification.jsx";
-import styles from './App.module.css';
+import { Options } from "../Options/Options.jsx";
+import { Feedback } from "../Feedback/Feedback.jsx";
+// import styles from "./App.module.css";
 
-export function Description() {
-    return (
-        <div className={styles.reviewsContainer}>
-           <h1>Sip Happens Café</h1>
-           <p>Please leave your feedback about our service by selecting one of the options below.</p>
-        </div>   
-    )
-}
-export function Options({ updateFeedback }) {
-    return (
-        <ul className={styles.reviewsList}>
-            <li><button onClick={() => updateFeedback('Good')}>Good</button></li>
-            <li><button onClick={() => updateFeedback('Neutral')}>Neutral</button></li>
-            <li><button onClick={() => updateFeedback('Bad')}>Bad</button></li>
-            <li><button onClick={() => updateFeedback('Reset')}>Reset</button></li>
-        </ul>
-    )
-}
-export function Feedback({ feedback }) {
-    const totalFeedback = feedback.Good + feedback.Neutral + feedback.Bad;
-    const positivePercentage = totalFeedback > 0
-    ? Math.round((feedback.Good / totalFeedback) * 100) 
-    : 0;
-    return (
-        <div className={styles.feedbacks}>
-            <p>Good: {feedback.Good}</p>
-            <p>Neutral: {feedback.Neutral}</p>
-            <p>Bad: {feedback.Bad}</p>
-            <p>Total: {totalFeedback}</p>
-            <p>Positive: {positivePercentage}%</p>
-        </div>
-    );
-}
+// export function Description() {
+//     return (
+//         <div className={styles.reviewsContainer}>
+//            <h1>Sip Happens Café</h1>
+//            <p>Please leave your feedback about our service by selecting one of the options below.</p>
+//         </div>   
+//     )
+// }
+// export function Options({ updateFeedback }) {
+//     return (
+//         <ul className={styles.reviewsList}>
+//             <li><button onClick={() => updateFeedback('Good')}>Good</button></li>
+//             <li><button onClick={() => updateFeedback('Neutral')}>Neutral</button></li>
+//             <li><button onClick={() => updateFeedback('Bad')}>Bad</button></li>
+//             <li><button onClick={() => updateFeedback('Reset')}>Reset</button></li>
+//         </ul>
+//     )
+// }
+// export function Feedback({ feedback }) {
+//     const totalFeedback = feedback.Good + feedback.Neutral + feedback.Bad;
+//     const positivePercentage = totalFeedback > 0
+//     ? Math.round((feedback.Good / totalFeedback) * 100) 
+//     : 0;
+//     return (
+//         <div className={styles.feedbacks}>
+//             <p>Good: {feedback.Good}</p>
+//             <p>Neutral: {feedback.Neutral}</p>
+//             <p>Bad: {feedback.Bad}</p>
+//             <p>Total: {totalFeedback}</p>
+//             <p>Positive: {positivePercentage}%</p>
+//         </div>
+//     );
+// }
 
 
 export default function App() {
