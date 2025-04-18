@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import Feedback from './Feedback/Feedback.jsx'
-import Options from './Options/Options.jsx'
+import Feedback from './Feedback/Feedback'
+import Options from './Options/Options'
 import '../components/App.module.css'
 
 
