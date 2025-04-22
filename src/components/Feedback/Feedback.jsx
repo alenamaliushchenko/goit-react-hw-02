@@ -1,7 +1,7 @@
 import './Feedback.module.css'
-const Feedback = ({ feedback }) => {
-const totalFeedback = feedback.good + feedback.neutral + feedback.bad;
-const positiveFeedback = Math.round((feedback.good / totalFeedback) * 100);
+const Feedback = ({ feedback, totalFeedback, positiveFeedback }) => {
+
+
   
     return (
       <div>
